@@ -1,6 +1,6 @@
 body,html,div,blockquote,img,label,p,h1,h2,h3,h4,h5,h6,pre,ul,
 ol,li,dl,dt,dd,form,a,fieldset,input,th,td {
-	margin: 0; padding: 0; border: 0; outline: none;
+	margin: 0; padding: 0; border: 0;
 }
 @font-face {
 	font-family: "Lora";
@@ -25,6 +25,7 @@ header {
 	color: #FEFAE0;
 	padding: 16px;
 	font-family: "Lora", serif;
+	border-bottom: 2px solid #444d3e;
 }
 nav {
 	background-color:#A9B388;
@@ -33,6 +34,7 @@ nav {
 	flex-shrink: 0;
 	box-sizing: border-box;
 	text-align: center;
+	border-right: 2px solid #656e4d;
 }
 nav ul {
 	list-style-type: none;
@@ -47,7 +49,6 @@ h1 {
 }
 p {
 	color: #000000;
-	text-align: center;
 }
 body {
 	background-color:#FEFAE0;
@@ -75,10 +76,11 @@ body {
 footer {
 	background-color:#B99470;
 	padding: 10px;
-	text-align: center;
 	color:#FEFAE0;
 	box-sizing: border-box;
 	font-family: "Lora", serif;
+	text-align: center;
+	border-top: 2px solid #9c8065;
 }
 .layout {
 	flex: 1;
@@ -87,4 +89,33 @@ footer {
 main {
 	flex: 1;
 	font-family: "Nunito", serif;
+}
+article {
+	text-align: left;
+	padding: 16px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+@media (max-width: 768px) {
+	.layout {
+		flex-direction: column;
+	}
+	nav {
+		width: 100%;
+	}
+	nav ul {
+		position: static;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.button {
+		margin: 6px;
+		padding: 10px 18px;
+	}
+	header {
+		font-size: 24px;
+	}
 }
